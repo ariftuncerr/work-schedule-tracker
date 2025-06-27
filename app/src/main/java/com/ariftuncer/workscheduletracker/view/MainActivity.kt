@@ -1,16 +1,13 @@
-package com.ariftuncer.workscheduletracker
+package com.ariftuncer.workscheduletracker.view
 
-import android.content.Context
-import android.graphics.Path
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.ariftuncer.workscheduletracker.R
 import com.ariftuncer.workscheduletracker.adapter.OperationAdapter
 import com.ariftuncer.workscheduletracker.adapter.OperationCard
 import com.ariftuncer.workscheduletracker.databinding.ActivityMainBinding
@@ -28,14 +25,15 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val workRecordCard = OperationCard("Çalışma Kaydı",R.drawable.calendar_60)
-        val newSalaryCard = OperationCard("Yeni Maaş Girişi",R.drawable.new_salary_60)
-        val analysisCard = OperationCard("Detaylı Analiz",R.drawable.analytics_60)
-        val projectCompanyCard = OperationCard("Şirket / Proje",R.drawable.project_company_60)
+        val workRecordCard = OperationCard("workCalendar","Çalışma Kaydı", R.drawable.calendar_60)
+        val newSalaryCard = OperationCard("newSalary","Yeni Maaş Girişi", R.drawable.new_salary_60)
+        val analysisCard = OperationCard("analysis","Detaylı Analiz", R.drawable.analytics_60)
+        val projectCompanyCard = OperationCard("company/project","Şirket/Proje", R.drawable.project_company_60)
         val operationCardList = listOf<OperationCard>(newSalaryCard,workRecordCard,analysisCard,projectCompanyCard)
-        val operationAdapter = OperationAdapter(applicationContext,operationCardList)
+        val operationAdapter = OperationAdapter(this, operationCardList)
 
-        binding.operationRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        binding.operationRecyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.operationRecyclerView.adapter = operationAdapter
     }
 }
