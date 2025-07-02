@@ -1,4 +1,4 @@
-package com.ariftuncer.workscheduletracker.adapter
+package com.ariftuncer.workscheduletracker.adapter.operationAdapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.collection.emptyLongSet
 import androidx.recyclerview.widget.RecyclerView
 import com.ariftuncer.workscheduletracker.R
+import com.ariftuncer.workscheduletracker.adapter.operationAdapter.OperationCard
+import com.ariftuncer.workscheduletracker.view.operations.CompanyAndProjectsActivity
+import com.ariftuncer.workscheduletracker.view.operations.DetailsActivity
 import com.ariftuncer.workscheduletracker.view.operations.NewSalaryActivity
 
-class OperationAdapter (val context: Context,val operationCardList: List<OperationCard>) : RecyclerView.Adapter<OperationAdapter.OperationCardHolder>(){
+class OperationAdapter (val context: Context, val operationCardList: List<OperationCard>) : RecyclerView.Adapter<OperationAdapter.OperationCardHolder>(){
     class OperationCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val operationCard = itemView.findViewById<CardView>(R.id.operationsCard)
         val operationImage = itemView.findViewById<ImageView>(R.id.cardImageBtn)
@@ -38,8 +40,10 @@ class OperationAdapter (val context: Context,val operationCardList: List<Operati
 
         holder.operationImage.setOnClickListener { view ->
             val intent = when(currentCard){
-                 "newSalary"-> Intent(context, NewSalaryActivity :: class.java)
-                  else -> Intent(context, NewSalaryActivity :: class.java)
+                 "newSalary"-> Intent(context, NewSalaryActivity::class.java)
+                 "analysis" -> Intent(context, DetailsActivity::class.java)
+                 "company/project" -> Intent(context, CompanyAndProjectsActivity::class.java)
+                  else -> Intent(context, NewSalaryActivity::class.java)
             }
             context.startActivity(intent)
         }

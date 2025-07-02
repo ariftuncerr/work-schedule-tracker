@@ -1,4 +1,4 @@
-package com.ariftuncer.workscheduletracker.adapter
+package com.ariftuncer.workscheduletracker.adapter.operationAdapter
 
 class OperationCard(
     val cardName : String,

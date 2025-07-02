@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Seçili buton -->
+    <item android:state_checked="true" android:color="@color/md_theme_primary" />
+    <!-- Seçili olmayan buton -->
+    <item android:color="@color/md_theme_primaryFixedDim" />
+</selector>

@@ -8,8 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ariftuncer.workscheduletracker.R
-import com.ariftuncer.workscheduletracker.adapter.OperationAdapter
-import com.ariftuncer.workscheduletracker.adapter.OperationCard
+import com.ariftuncer.workscheduletracker.adapter.operationAdapter.OperationAdapter
+import com.ariftuncer.workscheduletracker.adapter.operationAdapter.OperationCard
 import com.ariftuncer.workscheduletracker.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
