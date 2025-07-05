@@ -35,9 +35,6 @@ class CompanyAndProjectsActivity : AppCompatActivity() {
         binding.monthlyBtn.isEnabled = false
 
 
-
-
-
     }
     fun amountOperations(view : View){
         val activeBtn = when(binding.monthlyBtn.isEnabled){

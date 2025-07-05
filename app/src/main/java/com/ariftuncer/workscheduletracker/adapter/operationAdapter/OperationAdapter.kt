@@ -41,7 +41,7 @@ class OperationAdapter (val context: Context, val operationCardList: List<Operat
         holder.operationImage.setOnClickListener { view ->
             val intent = when(currentCard){
                  "newSalary"-> Intent(context, NewSalaryActivity::class.java)
-                 "analysis" -> Intent(context, DetailsActivity::class.java)
+                 "details" -> Intent(context, DetailsActivity::class.java)
                  "company/project" -> Intent(context, CompanyAndProjectsActivity::class.java)
                   else -> Intent(context, NewSalaryActivity::class.java)
             }
