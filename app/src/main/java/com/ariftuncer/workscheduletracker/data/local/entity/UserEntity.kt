@@ -8,13 +8,13 @@ import java.util.UUID
 @Entity(tableName = "user")
 data class  UserEntity(
     @PrimaryKey
-    val id : String = UUID.randomUUID().toString(),
+    val id: String,
     @ColumnInfo(name = "username")
-    val userName : String,
+    val userName: String,
     @ColumnInfo(name = "email")
-    val userEmail : String,
+    val userEmail: String,
     @ColumnInfo(name = "password")
-    val userPassword : String,
+    val userPassword: String,
     @ColumnInfo(name = "created_at")
-    val createdAt : Long
+    val createdAt: Long
 )

@@ -1,4 +1,4 @@
-package com.ariftuncer.workscheduletracker.view.operations
+package com.ariftuncer.workscheduletracker.view.operations.details
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

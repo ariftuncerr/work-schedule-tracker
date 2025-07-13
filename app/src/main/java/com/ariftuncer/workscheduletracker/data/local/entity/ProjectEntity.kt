@@ -24,7 +24,7 @@ import java.util.UUID
     ])
 data class ProjectEntity(
     @PrimaryKey
-    val id : String = UUID.randomUUID().toString(),
+    val id : String,
     //Foreign Keys
     @ColumnInfo(name = "user_id") // User
     val userId : String,
@@ -32,7 +32,9 @@ data class ProjectEntity(
     val companyId : String,
 
     //project attributes
+    @ColumnInfo(name = "project_name")
+    val projectName : String,
     @ColumnInfo(name = "user_salary")
-    val userSalary : Double
+    val userSalary : Double,
 
 )

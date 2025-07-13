@@ -13,13 +13,13 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".view.operations.CompanyAndProjectsActivity"
+            android:name=".view.operations.companyAndProjects.CompanyAndProjectsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.operations.DetailsActivity"
+            android:name=".view.operations.details.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.operations.NewSalaryActivity"
+            android:name=".view.operations.newSalary.NewSalaryActivity"
             android:exported="false" />
         <activity
             android:name=".view.OperationsActivity"

@@ -3,6 +3,7 @@ package com.ariftuncer.workscheduletracker.data.local.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.PrimaryKey
 import java.util.UUID
 
 @Entity(tableName = "work_entries",
@@ -30,8 +31,8 @@ import java.util.UUID
 )
 data class WorkEntriesEntity (
 
-    @ColumnInfo(name = "id")
-    val id : String = UUID.randomUUID().toString(),
+    @PrimaryKey
+    val id : String,
 
     //foreign keys
     @ColumnInfo(name = "user_id")

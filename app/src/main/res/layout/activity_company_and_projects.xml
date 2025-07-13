@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.operations.CompanyAndProjectsActivity">
+    tools:context=".view.operations.companyAndProjects.CompanyAndProjectsActivity">
 
     <ScrollView
         android:layout_width="0dp"
@@ -82,7 +82,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/companyNameEditTxt"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:padding="12dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +106,8 @@
                     android:id="@+id/projectNameEditTxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Proje" />
+                    android:hint="Proje"
+                    android:padding="12dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,7 +130,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/salaryEditTxt"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:padding="12dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -192,6 +195,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
+                android:onClick="onSaveClick"
                 android:text="Kaydet"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

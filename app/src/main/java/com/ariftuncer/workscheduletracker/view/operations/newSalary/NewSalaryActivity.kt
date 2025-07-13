@@ -1,4 +1,4 @@
-package com.ariftuncer.workscheduletracker.view.operations
+package com.ariftuncer.workscheduletracker.view.operations.newSalary
 
 import android.os.Bundle
 import android.view.View
@@ -17,7 +17,7 @@ class NewSalaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityNewSalaryBinding.inflate(layoutInflater)
-        val view : View = binding.root
+        val view: View = binding.root
         setContentView(view)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -25,19 +25,14 @@ class NewSalaryActivity : AppCompatActivity() {
             insets
         }
         binding.materialButtonToggleGroup2.addOnButtonCheckedListener { group, checkedId, isChecked ->
-            if(isChecked){
+            if (isChecked) {
                 val selectedButton = group.findViewById<MaterialButton>(checkedId)
 
-                when(selectedButton){
-                    binding.fullBtn -> Toast.makeText(this,"Full Btn", Toast.LENGTH_SHORT).show()
+                when (selectedButton) {
+                    binding.fullBtn -> Toast.makeText(this, "Full Btn", Toast.LENGTH_SHORT).show()
                 }
             }
-
         }
 
-
-
-
     }
-
 }

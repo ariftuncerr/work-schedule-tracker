@@ -11,9 +11,9 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ariftuncer.workscheduletracker.R
 import com.ariftuncer.workscheduletracker.adapter.operationAdapter.OperationCard
-import com.ariftuncer.workscheduletracker.view.operations.CompanyAndProjectsActivity
-import com.ariftuncer.workscheduletracker.view.operations.DetailsActivity
-import com.ariftuncer.workscheduletracker.view.operations.NewSalaryActivity
+import com.ariftuncer.workscheduletracker.view.operations.companyAndProjects.CompanyAndProjectsActivity
+import com.ariftuncer.workscheduletracker.view.operations.details.DetailsActivity
+import com.ariftuncer.workscheduletracker.view.operations.newSalary.NewSalaryActivity
 
 class OperationAdapter (val context: Context, val operationCardList: List<OperationCard>) : RecyclerView.Adapter<OperationAdapter.OperationCardHolder>(){
     class OperationCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

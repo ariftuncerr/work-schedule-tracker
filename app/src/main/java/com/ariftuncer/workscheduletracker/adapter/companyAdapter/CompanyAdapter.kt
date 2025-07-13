@@ -1,8 +1,6 @@
 package com.ariftuncer.workscheduletracker.adapter.companyAdapter
 
 import android.content.Context
-import android.media.Image
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,8 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ariftuncer.workscheduletracker.R
 import com.ariftuncer.workscheduletracker.adapter.projectAdapter.ProjectAdapter
+import com.ariftuncer.workscheduletracker.data.local.entity.CompanyEntity
+import com.ariftuncer.workscheduletracker.data.local.entity.ProjectEntity
 
-class CompanyAdapter (val context: Context, val list : List<String>) : RecyclerView.Adapter<CompanyAdapter.CompanyCardHolder>() {
+class CompanyAdapter (val context: Context, var companyList : List<CompanyEntity>?) : RecyclerView.Adapter<CompanyAdapter.CompanyCardHolder>() {
 
     class CompanyCardHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val expandBtn = itemView.findViewById<ImageButton>(R.id.expandBtn)
@@ -36,7 +36,7 @@ class CompanyAdapter (val context: Context, val list : List<String>) : RecyclerV
         holder: CompanyCardHolder,
         position: Int
     ) {
-        holder.companyText.text = list[position].toString()
+        holder.companyText.text = companyList?.get(position)?.name.toString()
 
         val projectList = listOf<String>("ABCDE","FGEH","KLMNO")
         val projectAdapter = ProjectAdapter(context,projectList)
@@ -63,21 +63,15 @@ class CompanyAdapter (val context: Context, val list : List<String>) : RecyclerV
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return companyList?.size ?: 0
+    }
+    fun updateList(newCompanyList : List<CompanyEntity>, newProjectList : List<ProjectEntity> = emptyList()){
+        companyList = newCompanyList
+        notifyDataSetChanged()
+
     }
 
 

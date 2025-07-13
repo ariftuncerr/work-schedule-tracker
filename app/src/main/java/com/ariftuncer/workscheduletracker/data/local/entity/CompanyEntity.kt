@@ -19,7 +19,7 @@ import java.util.UUID
 )
 data class CompanyEntity(
     @PrimaryKey
-    val id : String = UUID.randomUUID().toString(),
+    val id : String,
     @ColumnInfo(name = "user_id")
     val userId : String, //foreign key -> users
     @ColumnInfo(name = "name")
